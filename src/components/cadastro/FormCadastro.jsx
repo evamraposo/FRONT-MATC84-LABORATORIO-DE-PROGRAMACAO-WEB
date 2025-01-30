@@ -14,10 +14,10 @@ import {Eye, EyeOff} from "lucide-react"
 
 function FormCadastro(){
 
-    const [form, setForm] = useContext(FormCadastroContext)
+    const [form, setForm] = useContext(FormCadastroContext);
 
-    const [showPassword, setShowPassword] = useState(false)
-    const [showPassword2, setShowPassword2] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword2, setShowPassword2] = useState(false);
 
     /**
      * Manipula a mudança de valores nos campos de entrada do formulário.
