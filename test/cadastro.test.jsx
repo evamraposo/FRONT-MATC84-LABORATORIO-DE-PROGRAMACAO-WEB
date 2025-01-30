@@ -39,8 +39,8 @@ describe("Componente Cadastro", () => {
       </BrowserRouter>
     );
 
-    // const input = screen.getByText(/voltar/i);
-    const input = screen.getByText(/criar conta/i);
+    const input = screen.getByText(/voltar/i);
+    //const input = screen.getByText(/criar conta/i);
     expect(input).toBeInTheDocument();
 
 
