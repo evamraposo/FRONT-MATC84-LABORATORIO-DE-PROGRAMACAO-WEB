@@ -19,10 +19,93 @@ describe("Componente Cadastro", () => {
       </FormCadastroProvider>
     );
 
-  const input = screen.getByPlaceholderText(/nome completo/i);
+  const input = screen.getByPlaceholderText('nome completo');
   expect(input).toBeInTheDocument();
 
   });
+
+  test("campo email esta presente no formulario de cadastro", () => {
+    render(
+      <FormCadastroProvider>
+        <FormCadastro />
+      </FormCadastroProvider>
+    );
+
+  const input = screen.getByPlaceholderText('email');
+  expect(input).toBeInTheDocument();
+
+  });
+
+  test("campo cidade esta presente no formulario de cadastro", () => {
+    render(
+      <FormCadastroProvider>
+        <FormCadastro />
+      </FormCadastroProvider>
+    );
+
+  const input = screen.getByPlaceholderText('cidade');
+  expect(input).toBeInTheDocument();
+
+  });
+
+  test("campo estado esta presente no formulario de cadastro", () => {
+    render(
+      <FormCadastroProvider>
+        <FormCadastro />
+      </FormCadastroProvider>
+    );
+
+  const input = screen.getByPlaceholderText('estado');
+  expect(input).toBeInTheDocument();
+
+  });
+
+  test("campo senha esta presente no formulario de cadastro", () => {
+    render(
+      <FormCadastroProvider>
+        <FormCadastro />
+      </FormCadastroProvider>
+    );
+
+  const input = screen.getByPlaceholderText('senha');
+  expect(input).toBeInTheDocument();
+
+  });
+
+  test("campo confirmar senha esta presente no formulario de cadastro", () => {
+    render(
+      <FormCadastroProvider>
+        <FormCadastro />
+      </FormCadastroProvider>
+    );
+
+  const input = screen.getByPlaceholderText('confirme a senha');
+  expect(input).toBeInTheDocument();
+
+  });
+
+  test("verifica se existe um botao para criar a conta", () => {
+
+    render(
+      <BrowserRouter>
+      <AlertColorProvider>
+      <AlertTypeProvider>
+        <AlertProvider>
+        <Alert />
+        <Cadastro />
+      </AlertProvider>
+      </AlertTypeProvider>
+      </AlertColorProvider>
+      </BrowserRouter>
+    );
+
+    const input = screen.getByText(/criar conta/i);
+    expect(input).toBeInTheDocument();
+
+
+  });
+
+
 
   test("verifica se existe um botao para voltar a tela de login", () => {
 
@@ -40,7 +123,6 @@ describe("Componente Cadastro", () => {
     );
 
     const input = screen.getByText(/voltar/i);
-    //const input = screen.getByText(/criar conta/i);
     expect(input).toBeInTheDocument();
 
 
